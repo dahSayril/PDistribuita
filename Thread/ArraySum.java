@@ -6,7 +6,7 @@ public class ArraySum extends Thread {
 	public static int[] data;
 	public static final int SIZE = 60000;
 	public static final int MAX_THR = 6;
-	
+	// DA QUANDO INIZI A QUANDO FINISCI
 	private int start, finish;
 	
 	public ArraySum(int start, int finish) {
