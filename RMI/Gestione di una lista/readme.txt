@@ -1,0 +1,2 @@
+Importante! L'interfaccia che il client e il server condividono, se nel server essa è posizionata all'interno di un package "NOME_DEL_PACKAGE", allora anche nel client dovrà essere posizionata in un package "NOME_DEL_PACKAGE". Questo è molto importante!!!
+Ovviamente prima di lanciare il server, bisogna far partire rmiregistry tramite External Tool Configuration, e ovviamente settare la polocy da linea di comando del server.
