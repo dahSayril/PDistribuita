@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://unisa.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://unisa.it/">
+
+<xs:element name="createVentilatore" type="tns:createVentilatore"/>
+
+<xs:element name="createVentilatoreResponse" type="tns:createVentilatoreResponse"/>
+
+<xs:element name="deleteVentilatore" type="tns:deleteVentilatore"/>
+
+<xs:element name="deleteVentilatoreResponse" type="tns:deleteVentilatoreResponse"/>
+
+<xs:element name="getVentilatore" type="tns:getVentilatore"/>
+
+<xs:element name="getVentilatoreResponse" type="tns:getVentilatoreResponse"/>
+
+<xs:element name="printAll" type="tns:printAll"/>
+
+<xs:element name="printAllResponse" type="tns:printAllResponse"/>
+
+<xs:element name="printByCountry" type="tns:printByCountry"/>
+
+<xs:element name="printByCountryResponse" type="tns:printByCountryResponse"/>
+
+<xs:element name="printQuickFan" type="tns:printQuickFan"/>
+
+<xs:element name="printQuickFanResponse" type="tns:printQuickFanResponse"/>
+
+<xs:element name="setGiriAlMinuto" type="tns:setGiriAlMinuto"/>
+
+<xs:element name="setGiriAlMinutoResponse" type="tns:setGiriAlMinutoResponse"/>
+
+<xs:element name="updateVentilatore" type="tns:updateVentilatore"/>
+
+<xs:element name="updateVentilatoreResponse" type="tns:updateVentilatoreResponse"/>
+
+<xs:complexType name="createVentilatore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ventilatoreEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ventilatoreEntity">
+<xs:sequence>
+<xs:element name="elemVenduti" type="xs:int"/>
+<xs:element name="giriMinuto" type="xs:int"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="marca" type="xs:string" minOccurs="0"/>
+<xs:element name="modello" type="xs:string" minOccurs="0"/>
+<xs:element name="nazione" type="xs:string" minOccurs="0"/>
+<xs:element name="rumore" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createVentilatoreResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateVentilatore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ventilatoreEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVentilatoreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ventilatoreEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setGiriAlMinuto">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setGiriAlMinutoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getVentilatore">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVentilatoreResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ventilatoreEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printQuickFan">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printQuickFanResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ventilatoreEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVentilatore">
+<xs:sequence>
+<xs:element name="arg0" type="tns:ventilatoreEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVentilatoreResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ventilatoreEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printByCountry">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printByCountryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ventilatoreEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
