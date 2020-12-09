@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://unisa.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://unisa.it/">
+
+<xs:element name="aggiornaCircolo" type="tns:aggiornaCircolo"/>
+
+<xs:element name="aggiornaCircoloResponse" type="tns:aggiornaCircoloResponse"/>
+
+<xs:element name="circoloEntity" type="tns:circoloEntity"/>
+
+<xs:element name="creaCircolo" type="tns:creaCircolo"/>
+
+<xs:element name="creaCircoloResponse" type="tns:creaCircoloResponse"/>
+
+<xs:element name="eliminaCircolo" type="tns:eliminaCircolo"/>
+
+<xs:element name="eliminaCircoloResponse" type="tns:eliminaCircoloResponse"/>
+
+<xs:element name="ottieniCircoli" type="tns:ottieniCircoli"/>
+
+<xs:element name="ottieniCircoliResponse" type="tns:ottieniCircoliResponse"/>
+
+<xs:element name="ottieniCircolo" type="tns:ottieniCircolo"/>
+
+<xs:element name="ottieniCircoloResponse" type="tns:ottieniCircoloResponse"/>
+
+<xs:element name="ottieniPerProvincia" type="tns:ottieniPerProvincia"/>
+
+<xs:element name="ottieniPerProvinciaResponse" type="tns:ottieniPerProvinciaResponse"/>
+
+<xs:element name="ottieniPerRegione" type="tns:ottieniPerRegione"/>
+
+<xs:element name="ottieniPerRegioneResponse" type="tns:ottieniPerRegioneResponse"/>
+
+<xs:complexType name="ottieniPerRegione">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniPerRegioneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circoloEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="circoloEntity">
+<xs:sequence>
+<xs:element name="città" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="nomeCircolo" type="xs:string" minOccurs="0"/>
+<xs:element name="provincia" type="xs:string" minOccurs="0"/>
+<xs:element name="regione" type="xs:string" minOccurs="0"/>
+<xs:element name="responsabile" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniPerProvincia">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniPerProvinciaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circoloEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaCircolo">
+<xs:sequence>
+<xs:element name="arg0" type="tns:circoloEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaCircoloResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="eliminaCircolo">
+<xs:sequence>
+<xs:element name="arg0" type="tns:circoloEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaCircoloResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ottieniCircoli">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ottieniCircoliResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circoloEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniCircolo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniCircoloResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circoloEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCircolo">
+<xs:sequence>
+<xs:element name="arg0" type="tns:circoloEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCircoloResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circoloEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
