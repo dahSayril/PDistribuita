@@ -1,5 +1,5 @@
 # Simulazione scritta
-* [EJB Module - CD (Progetto lato Server)](#ejb-module)
+* [EJB Module - CD (Progetto lato Server)](#ejb-module)  
 In questa simulazione scritta è previsto solo il progetto lato server.  
 Unico errore rilevato in CdMDB: nel metodo getBody() manca l'argomento Double.class.
 ## EJB Module
