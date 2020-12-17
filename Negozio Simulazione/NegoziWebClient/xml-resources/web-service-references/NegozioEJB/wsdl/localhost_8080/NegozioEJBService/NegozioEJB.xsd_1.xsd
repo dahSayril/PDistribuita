@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://unisa.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://unisa.it/">
+
+<xs:element name="createNegozio" type="tns:createNegozio"/>
+
+<xs:element name="createNegozioResponse" type="tns:createNegozioResponse"/>
+
+<xs:element name="getNegozio" type="tns:getNegozio"/>
+
+<xs:element name="getNegozioResponse" type="tns:getNegozioResponse"/>
+
+<xs:element name="negozioEntity" type="tns:negozioEntity"/>
+
+<xs:element name="print" type="tns:print"/>
+
+<xs:element name="printActiveShops" type="tns:printActiveShops"/>
+
+<xs:element name="printActiveShopsResponse" type="tns:printActiveShopsResponse"/>
+
+<xs:element name="printByRegion" type="tns:printByRegion"/>
+
+<xs:element name="printByRegionResponse" type="tns:printByRegionResponse"/>
+
+<xs:element name="printResponse" type="tns:printResponse"/>
+
+<xs:element name="removeNegozio" type="tns:removeNegozio"/>
+
+<xs:element name="removeNegozioResponse" type="tns:removeNegozioResponse"/>
+
+<xs:element name="updateNegozio" type="tns:updateNegozio"/>
+
+<xs:element name="updateNegozioResponse" type="tns:updateNegozioResponse"/>
+
+<xs:complexType name="createNegozio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:negozioEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="negozioEntity">
+<xs:sequence>
+<xs:element name="città" type="xs:string" minOccurs="0"/>
+<xs:element name="direttore" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nomeNegozio" type="xs:string" minOccurs="0"/>
+<xs:element name="provincia" type="xs:string" minOccurs="0"/>
+<xs:element name="regione" type="xs:string" minOccurs="0"/>
+<xs:element name="venditeAnnoCorrente" type="xs:int"/>
+<xs:element name="venditeAnnoPrecedente" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createNegozioResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNegozio">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNegozioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:negozioEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printActiveShops">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printActiveShopsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:negozioEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printByRegion">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="printByRegionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:negozioEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="print">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="printResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:negozioEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNegozio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:negozioEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateNegozioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:negozioEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeNegozio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:negozioEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeNegozioResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
