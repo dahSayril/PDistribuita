@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://unisa.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://unisa.it/">
+
+<xs:element name="createTask" type="tns:createTask"/>
+
+<xs:element name="createTaskResponse" type="tns:createTaskResponse"/>
+
+<xs:element name="getAllTasks" type="tns:getAllTasks"/>
+
+<xs:element name="getAllTasksResponse" type="tns:getAllTasksResponse"/>
+
+<xs:element name="getByAssignee" type="tns:getByAssignee"/>
+
+<xs:element name="getByAssigneeResponse" type="tns:getByAssigneeResponse"/>
+
+<xs:element name="getByHoursWork" type="tns:getByHoursWork"/>
+
+<xs:element name="getByHoursWorkResponse" type="tns:getByHoursWorkResponse"/>
+
+<xs:element name="getByMinHoursWork" type="tns:getByMinHoursWork"/>
+
+<xs:element name="getByMinHoursWorkResponse" type="tns:getByMinHoursWorkResponse"/>
+
+<xs:element name="getByTipe" type="tns:getByTipe"/>
+
+<xs:element name="getByTipeResponse" type="tns:getByTipeResponse"/>
+
+<xs:element name="getNotAssigned" type="tns:getNotAssigned"/>
+
+<xs:element name="getNotAssignedResponse" type="tns:getNotAssignedResponse"/>
+
+<xs:element name="getNotComplete" type="tns:getNotComplete"/>
+
+<xs:element name="getNotCompleteResponse" type="tns:getNotCompleteResponse"/>
+
+<xs:element name="getStarted" type="tns:getStarted"/>
+
+<xs:element name="getStartedResponse" type="tns:getStartedResponse"/>
+
+<xs:element name="getTask" type="tns:getTask"/>
+
+<xs:element name="getTaskResponse" type="tns:getTaskResponse"/>
+
+<xs:element name="removeTask" type="tns:removeTask"/>
+
+<xs:element name="removeTaskResponse" type="tns:removeTaskResponse"/>
+
+<xs:element name="taskEntity" type="tns:taskEntity"/>
+
+<xs:element name="updateTask" type="tns:updateTask"/>
+
+<xs:element name="updateTaskResponse" type="tns:updateTaskResponse"/>
+
+<xs:complexType name="createTask">
+<xs:sequence>
+<xs:element name="arg0" type="tns:taskEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="taskEntity">
+<xs:sequence>
+<xs:element name="assegnatario" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="oreLavoro" type="xs:int"/>
+<xs:element name="percentualeCompletamento" type="xs:int"/>
+<xs:element name="tipo" type="tns:tipo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createTaskResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTask">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaskResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByHoursWork">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByHoursWorkResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByAssignee">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByAssigneeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNotAssigned">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNotAssignedResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipe">
+<xs:sequence>
+<xs:element name="arg0" type="tns:tipo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByTipeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllTasks">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllTasksResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByMinHoursWork">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getByMinHoursWorkResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeTask">
+<xs:sequence>
+<xs:element name="arg0" type="tns:taskEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeTaskResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNotComplete">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getNotCompleteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStarted">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getStartedResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTask">
+<xs:sequence>
+<xs:element name="arg0" type="tns:taskEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTaskResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taskEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="tipo">
+<xs:restriction base="xs:string">
+<xs:enumeration value="COMUNICAZIONE"/>
+<xs:enumeration value="INNOVAZIONE"/>
+<xs:enumeration value="AMMINISTRAZIONE"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
