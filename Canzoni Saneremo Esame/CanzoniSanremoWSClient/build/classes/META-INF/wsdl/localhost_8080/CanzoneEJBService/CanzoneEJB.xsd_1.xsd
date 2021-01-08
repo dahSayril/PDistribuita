@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://unisa.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://unisa.it/">
+
+<xs:element name="aggiornaCanzone" type="tns:aggiornaCanzone"/>
+
+<xs:element name="aggiornaCanzoneResponse" type="tns:aggiornaCanzoneResponse"/>
+
+<xs:element name="creaCanzone" type="tns:creaCanzone"/>
+
+<xs:element name="creaCanzoneResponse" type="tns:creaCanzoneResponse"/>
+
+<xs:element name="ottieniDaCategoria" type="tns:ottieniDaCategoria"/>
+
+<xs:element name="ottieniDaCategoriaResponse" type="tns:ottieniDaCategoriaResponse"/>
+
+<xs:element name="ottieniDaId" type="tns:ottieniDaId"/>
+
+<xs:element name="ottieniDaIdResponse" type="tns:ottieniDaIdResponse"/>
+
+<xs:element name="ottieniDaVotoMinimo" type="tns:ottieniDaVotoMinimo"/>
+
+<xs:element name="ottieniDaVotoMinimoResponse" type="tns:ottieniDaVotoMinimoResponse"/>
+
+<xs:element name="ottieniTutti" type="tns:ottieniTutti"/>
+
+<xs:element name="ottieniTuttiResponse" type="tns:ottieniTuttiResponse"/>
+
+<xs:element name="rimuoviCanzone" type="tns:rimuoviCanzone"/>
+
+<xs:element name="rimuoviCanzoneResponse" type="tns:rimuoviCanzoneResponse"/>
+
+<xs:element name="updateVotes" type="tns:updateVotes"/>
+
+<xs:element name="updateVotesResponse" type="tns:updateVotesResponse"/>
+
+<xs:complexType name="updateVotes">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="votes" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVotesResponse">
+<xs:sequence>
+<xs:element name="songUpdated" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="canzoneEntity">
+<xs:sequence>
+<xs:element name="cantanto" type="xs:boolean"/>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="incipit" type="xs:string" minOccurs="0"/>
+<xs:element name="nomePezzo" type="xs:string" minOccurs="0"/>
+<xs:element name="votiRicevuti" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rimuoviCanzone">
+<xs:sequence>
+<xs:element name="arg0" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rimuoviCanzoneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="creaCanzone">
+<xs:sequence>
+<xs:element name="arg0" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creaCanzoneResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaCategoria">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaCategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:canzoneEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCanzone">
+<xs:sequence>
+<xs:element name="arg0" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaCanzoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ottieniTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:canzoneEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaVotoMinimo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaVotoMinimoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:canzoneEntity" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ottieniDaIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:canzoneEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
